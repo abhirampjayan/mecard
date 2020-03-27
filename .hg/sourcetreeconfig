@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<RepositoryCustomSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AutoRefresh>true</AutoRefresh>
+  <AutoRefreshRemotes>true</AutoRefreshRemotes>
+  <CommitTextLinks />
+  <DraftCommitMsg />
+  <IncomingSavedCount>0</IncomingSavedCount>
+  <LastCheckedRemotes>2017-12-14T14:47:02.4797371+05:30</LastCheckedRemotes>
+  <LastUsedView>FileStatus</LastUsedView>
+  <LogBranchFilterIndex>0</LogBranchFilterIndex>
+  <OutgoingSavedCount>0</OutgoingSavedCount>
+  <RemoteProjectLinks>
+    <RepositoryRemoteProjectLink>
+      <BaseUrl>https://www.bitbucket.org</BaseUrl>
+      <Identifier>abhin953939/hakkeem</Identifier>
+      <RemoteName>default</RemoteName>
+      <Type>Bitbucket</Type>
+      <Username>abhin953939</Username>
+    </RepositoryRemoteProjectLink>
+  </RemoteProjectLinks>
+  <SidebarExpandedItems>
+    <string>File Status</string>
+    <string>Branches</string>
+  </SidebarExpandedItems>
+  <SidebarWidth>210</SidebarWidth>
+  <SubtreeLinks />
+</RepositoryCustomSettings>

@@ -1,0 +1,55 @@
+﻿body {}
+
+.loginbody {
+    position: relative;
+    background: #ffffff;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-color: green;
+    /*height:500px;*/
+    /*border-style: solid;*/
+}
+
+.myfooter {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #4aa9af;
+    text-align: center;
+}
+
+.myfooter a {
+    color: white;
+}
+
+.myfooter a:hover {
+    color: black;
+}
+
+.login-box,
+.register-box {
+    margin-bottom: unset;
+    margin-top: 5%;
+}
+
+.mylogo {
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    margin: 5% auto;
+    /*background-color: red;*/
+}
+
+.arabic {
+    margin-left: 40%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4aa9af;
+}

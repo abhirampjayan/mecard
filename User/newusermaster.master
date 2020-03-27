@@ -1,0 +1,206 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="newusermaster.master.cs" Inherits="User_newusermaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SITE TITLE -->
+    <%--<link rel="shortcut icon" href="../images/logo.png" type="text/css" />--%>
+    <link rel="shortcut icon" type="text/css" href="images/titlelogo.png" />
+
+    <%--  <link rel="shortcut icon" type="image/x-icon" href="../images/titlelogo.png" />--%>
+
+    <title>MediFi</title>
+
+    <%--<link href="css/style1.css" rel="stylesheet" />--%>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" type="text/css" href="searchstyle/css/bootstrap.min.css" />
+    <link href="../Design/dist/css/AdminLTE.min.css" rel="stylesheet" />
+    <!-- FONT -->
+    <link rel="stylesheet" type="text/css" href="searchstyle/css/font-awesome.css" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="searchstyle/style.css" media="all" />
+
+    <link href="SearchStyle/responsive.css" rel="stylesheet" />
+
+   <%-- <style>
+        #loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 10000000000;
+            background: url('../pre_loader/ajax-loader.gif') 50% 50% no-repeat rgb(249,249,249);
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#loader").fadeOut(3000);
+        });
+    </script>--%>
+
+    
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: #ecf0f5">
+    <form id="form1" runat="server">
+       
+        <%--<div id="loader"></div>--%>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div class="wrapper">
+            <!-- NAV -->
+            <nav class="navigation menu_area">
+                <!-- CONTAINER -->
+                <div class="container">
+                
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- HEADER LOGO -->
+                        <%--<a class="navbar-brand brand-logo" href="index.html">
+                            <img src="../hakkeem/img/logo.png" alt="" />
+                        </a>--%>
+                        <asp:HyperLink ID="HyperLink2" CssClass="navbar-brand brand-logo" Font-Bold="True" NavigateUrl="../default.aspx" runat="server"> 
+                            <img src="../Hakkeem/img/logo.png" alt="" /></asp:HyperLink>
+                        <!-- /HEADER LOGO -->
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div id="nav-collapse" class="top-nav collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="Search.aspx">Find Doctor</asp:HyperLink>
+
+                            </li>
+                            <%--   <li>
+                                <asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="true" ForeColor="#4aa9af" OnClick="LinkButton1_Click" meta:resourcekey="LinkButton1Resource1">Patient</asp:LinkButton>
+                            </li>--%>
+
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <%-- <asp:Image ID="ImgUser" runat="server" CssClass="user-image" meta:resourcekey="ImgUserResource1" />--%>
+
+                                    <asp:Label ID="patient" runat="server" Text="Label"></asp:Label>
+
+                                    <span class="hidden-xs"></span>
+
+                                    <%  try
+                                        {
+                                            if (Session["hakkemid_u"].ToString() != null || Session["hakkemid_u"].ToString() != "")
+                                            {
+                                    %>
+
+                                    <span class="caret" <%--style="margin-top: 0.2cm"--%>></span>
+                                    <%
+                                            }
+                                            else
+                                            { }
+                                        }
+                                        catch (Exception ex)
+                                        {
+
+                                        }
+                                    %>
+                                    
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink1" runat="server">Account</asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink5" runat="server">Appointments</asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink4" runat="server">History</asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink6" runat="server">Reports</asp:HyperLink>
+                                    </li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink3" runat="server">Feedback</asp:HyperLink></li>
+
+                                    <li>
+
+                                        <asp:LinkButton ID="LinkButton2" runat="server" CssClass="stylelink" ForeColor="Black" OnClick="LinkButton2_Click" meta:resourcekey="LinkButton2Resource1" Visible="False"></asp:LinkButton>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+
+                            <li>
+
+                                <asp:LinkButton ID="LinkButton3" Font-Bold="true" runat="server" CssClass="stylelink" Text="عربى" Visible="false" ForeColor="Black" CommandArgument="ar-EG" OnClick="LinkButton3_Click"></asp:LinkButton>
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                 
+                  
+                </div>
+
+                <!-- /.END CONTAINER -->
+            </nav>
+            <!-- /.END NAV -->
+            <section style="background-color: #ecf0f5">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </section>
+            <!-- HOME COPY RIGHT -->
+            <section id="copy">
+                <div class="container">
+                    <div class="row">
+                        <div class="copy_right text-center">
+                            
+                            <%if (string.IsNullOrEmpty(Session["hakkemid_u"] as string))
+                                { %>
+                            <p><a href="../default.aspx" style="color: #4aa9af">MediFi</a> &copy 2018, All Rights Reserved</p>
+                            <%}
+                            else
+                            { %>
+                            <p><a href="Search.aspx" style="color: #4aa9af">MediFi</a> &copy 2018, All Rights Reserved</p>
+                            <%} %>
+                           
+                                
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.END COPY RIGHT -->
+
+            <!-- The scroll to top feature -->
+            <div class="scroll-top-wrapper ">
+                <span class="scroll-top-inner">
+                    <i class="fa fa-2x fa-arrow-circle-up"></i>
+                </span>
+            </div>
+        </div>
+
+        
+    </form>
+    <!-- Start Javascript  -->
+    <%-- <script type="text/javascript" src="searchstyle/js/jquery.min.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script type="text/javascript" src="searchstyle/js/bootstrap.min.js"></script>
+    <!-- MY MAIN JS -->
+    <script type="text/javascript" src="searchstyle/js/main.js"></script>
+    <!-- MENU SCRIPT JS -->
+    <script type="text/javascript" src="searchstyle/js/script.js"></script>--%>
+
+    <%--    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>--%>
+</body>
+</html>

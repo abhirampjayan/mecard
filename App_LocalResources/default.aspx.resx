@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="applink1Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="applink1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="applinkResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="applinkResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Button1Resource1.Text" xml:space="preserve">
+    <value>Subscribe</value>
+  </data>
+  <data name="Button1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Button2Resource1.Text" xml:space="preserve">
+    <value>Arabic</value>
+  </data>
+  <data name="Button2Resource2.Text" xml:space="preserve">
+    <value>عربى</value>
+  </data>
+  <data name="Button2Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Button3Resource1.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Button5Resource1.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Button5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLink1.Text" xml:space="preserve">
+    <value>signin/join</value>
+  </data>
+  <data name="HyperLink1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLink22Resource1.Text" xml:space="preserve">
+    <value>Doctor</value>
+  </data>
+  <data name="HyperLink22Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLink2Resource1.Text" xml:space="preserve">
+    <value>Doctor</value>
+  </data>
+  <data name="HyperLink2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLink33Resource1.Text" xml:space="preserve">
+    <value>Hospital</value>
+  </data>
+  <data name="HyperLink33Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLink3Resource1.Text" xml:space="preserve">
+    <value>Hospital</value>
+  </data>
+  <data name="HyperLink3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLink44Resource1.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="HyperLink44Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLink4Resource1.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="HyperLink4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLink5Resource1.Text" xml:space="preserve">
+    <value>[HyperLink5]</value>
+  </data>
+  <data name="HyperLink5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label10Resource1.Text" xml:space="preserve">
+    <value>High Refunding</value>
+  </data>
+  <data name="Label10Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label11Resource1.Text" xml:space="preserve">
+    <value>91%</value>
+  </data>
+  <data name="Label11Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label12Resource1.Text" xml:space="preserve">
+    <value> 91% of MediFi patients
+									are commercially insured
+									or paying with cash.</value>
+  </data>
+  <data name="Label12Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label13Resource1.Text" xml:space="preserve">
+    <value>Large search presence</value>
+  </data>
+  <data name="Label13Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label14Resource1.Text" xml:space="preserve">
+    <value>100M</value>
+  </data>
+  <data name="Label14Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label15Resource1.Text" xml:space="preserve">
+    <value>  120 million annual doctor
+									searches show MediFi in
+									the top results.</value>
+  </data>
+  <data name="Label15Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label16Resource1.Text" xml:space="preserve">
+    <value>Are you a well reputed doctor?</value>
+  </data>
+  <data name="Label16Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label17Resource1.Text" xml:space="preserve">
+    <value>Why do doctors join MediFi?</value>
+  </data>
+  <data name="Label17Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label18Resource1.Text" xml:space="preserve">
+    <value>Across the country doctors rely on MediFi</value>
+  </data>
+  <data name="Label18Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label19Resource1.Text" xml:space="preserve">
+    <value>List Your Skills</value>
+  </data>
+  <data name="Label19Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label1Resource1.Text" xml:space="preserve">
+    <value>Feeling not well? Find a doctor.</value>
+  </data>
+  <data name="Label1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label20Resource1.Text" xml:space="preserve">
+    <value>Till you not join?</value>
+  </data>
+  <data name="Label20Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label21Resource1.Text" xml:space="preserve">
+    <value>Patients are losing patience rely when trying to access your care.</value>
+  </data>
+  <data name="Label21Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label22Resource1.Text" xml:space="preserve">
+    <value>Join Us &amp; Our Partner</value>
+  </data>
+  <data name="Label22Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label23Resource1.Text" xml:space="preserve">
+    <value>Get The MediFi App</value>
+  </data>
+  <data name="Label23Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label24Resource1.Text" xml:space="preserve">
+    <value>Download the MediFi App</value>
+  </data>
+  <data name="Label24Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label25Resource1.Text" xml:space="preserve">
+    <value>Send me a link to the app</value>
+  </data>
+  <data name="Label25Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label26Resource1.Text" xml:space="preserve">
+    <value>+966</value>
+  </data>
+  <data name="Label26Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label26Resource2.Text" xml:space="preserve">
+    <value>+669</value>
+  </data>
+  <data name="Label26Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label27Resource1.Text" xml:space="preserve">
+    <value>Available now</value>
+  </data>
+  <data name="Label27Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label28Resource1.Text" xml:space="preserve">
+    <value>Download on the</value>
+  </data>
+  <data name="Label28Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label29Resource1.Text" xml:space="preserve">
+    <value>Play Store</value>
+  </data>
+  <data name="Label29Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label2Resource1.Text" xml:space="preserve">
+    <value>Manage your health. Verified doctors to choose from. Your health records when you need them. Connect to your doctor and improve your health.</value>
+  </data>
+  <data name="Label2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label30Resource1.Text" xml:space="preserve">
+    <value>Download on the</value>
+  </data>
+  <data name="Label30Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label31Resource1.Text" xml:space="preserve">
+    <value>Play Store</value>
+  </data>
+  <data name="Label31Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label32Resource1.Text" xml:space="preserve">
+    <value>Subscribe Us For Newsletter:</value>
+  </data>
+  <data name="Label32Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label33Resource1.Text" xml:space="preserve">
+    <value>Get Touch With Us</value>
+  </data>
+  <data name="Label33Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label34Resource1.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Label34Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label35Resource1.Text" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Label35Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label36Resource1.Text" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="Label36Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label37Resource1.Text" xml:space="preserve">
+    <value>Search By</value>
+  </data>
+  <data name="Label37Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label38Resource1.Text" xml:space="preserve">
+    <value>Doctor Name</value>
+  </data>
+  <data name="Label38Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label39Resource1.Text" xml:space="preserve">
+    <value>Speciality</value>
+  </data>
+  <data name="Label39Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label3Resource1.Text" xml:space="preserve">
+    <value>BOOK AN APPOINTMENT NOW!</value>
+  </data>
+  <data name="Label3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label40Resource1.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Label40Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label41Resource1.Text" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Label41Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label42Resource1.Text" xml:space="preserve">
+    <value>Hospital</value>
+  </data>
+  <data name="Label42Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label43Resource1.Text" xml:space="preserve">
+    <value>Are you a Top Doctor?</value>
+  </data>
+  <data name="Label43Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label44Resource1.Text" xml:space="preserve">
+    <value>Join MediFi Today!</value>
+  </data>
+  <data name="Label44Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label45Resource1.Text" xml:space="preserve">
+    <value>MediFi for Health</value>
+  </data>
+  <data name="Label45Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label46Resource1.Text" xml:space="preserve">
+    <value>Systems</value>
+  </data>
+  <data name="Label47Resource1.Text" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="Label48Resource1.Text" xml:space="preserve">
+    <value>Follow Us on</value>
+  </data>
+  <data name="Label48Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label49Resource1.Text" xml:space="preserve">
+    <value>MediFi &amp;copy 2019, All Rights Reserved</value>
+  </data>
+  <data name="Label49Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label4Resource1.Text" xml:space="preserve">
+    <value>Multiply Performance</value>
+  </data>
+  <data name="Label4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label50.Text" xml:space="preserve">
+    <value>DOCTOR</value>
+  </data>
+  <data name="Label50.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label51.Text" xml:space="preserve">
+    <value>HOSPITAL</value>
+  </data>
+  <data name="Label51.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label52.Text" xml:space="preserve">
+    <value>APP FEATURES</value>
+  </data>
+  <data name="Label52.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label5Resource1.Text" xml:space="preserve">
+    <value>78%</value>
+  </data>
+  <data name="Label5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label68Resource1.Text" xml:space="preserve">
+    <value>Available now</value>
+  </data>
+  <data name="Label68Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label6Resource1.Text" xml:space="preserve">
+    <value> 78% of patients who rebook
+									in the same specialty chose
+									the same practice.</value>
+  </data>
+  <data name="Label6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label6Resource6.Text" xml:space="preserve">
+    <value> 78٪ من المرضى الذين ريبوك
+في نفس التخصص اختار
+نفس الممارسة.</value>
+  </data>
+  <data name="Label6Resource6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label7Resource1.Text" xml:space="preserve">
+    <value>Improve Apperance</value>
+  </data>
+  <data name="Label7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label8Resource1.Text" xml:space="preserve">
+    <value>9%</value>
+  </data>
+  <data name="Label8Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Label9Resource1.Text" xml:space="preserve">
+    <value>  MediFi Reminders improves
+									attendance by 9%.</value>
+  </data>
+  <data name="Label9Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>--Select--</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>--Select--</value>
+  </data>
+  <data name="ListItemResource10.Text" xml:space="preserve">
+    <value>Neurology</value>
+  </data>
+  <data name="ListItemResource10.Value" xml:space="preserve">
+    <value>Neurology</value>
+  </data>
+  <data name="ListItemResource11.Text" xml:space="preserve">
+    <value>Psychology</value>
+  </data>
+  <data name="ListItemResource11.Value" xml:space="preserve">
+    <value>Psychology</value>
+  </data>
+  <data name="ListItemResource12.Text" xml:space="preserve">
+    <value>Dermatology</value>
+  </data>
+  <data name="ListItemResource12.Value" xml:space="preserve">
+    <value>Dermatology</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Cardiology</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>Cardiology</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Ophthalmology</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>Ophthalmology</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>Neurology</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>Neurology</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>Psychology</value>
+  </data>
+  <data name="ListItemResource5.Value" xml:space="preserve">
+    <value>Psychology</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value>Dermatology</value>
+  </data>
+  <data name="ListItemResource6.Value" xml:space="preserve">
+    <value>Dermatology</value>
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>--Select--</value>
+  </data>
+  <data name="ListItemResource7.Value" xml:space="preserve">
+    <value>--Select--</value>
+  </data>
+  <data name="ListItemResource8.Text" xml:space="preserve">
+    <value>Cardiology</value>
+  </data>
+  <data name="ListItemResource8.Value" xml:space="preserve">
+    <value>Cardiology</value>
+  </data>
+  <data name="ListItemResource9.Text" xml:space="preserve">
+    <value>Ophthalmology</value>
+  </data>
+  <data name="ListItemResource9.Value" xml:space="preserve">
+    <value>Ophthalmology</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>MediFi | A MediFi Product</value>
+  </data>
+  <data name="RegularExpressionValidator1Resource1.ErrorMessage" xml:space="preserve">
+    <value>* Enter a valid number start with 5</value>
+  </data>
+  <data name="RegularExpressionValidator1Resource2.ErrorMessage" xml:space="preserve">
+    <value>* Please Enter the valid email</value>
+  </data>
+  <data name="RegularExpressionValidator1Resource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RegularExpressionValidator1Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RegularExpressionValidator2Resource1.ErrorMessage" xml:space="preserve">
+    <value>* Enter valid number</value>
+  </data>
+  <data name="RegularExpressionValidator2Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RegularExpressionValidator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RegularExpressionValidator2Resource2.ErrorMessage" xml:space="preserve">
+    <value>* يرجى إدخال البريد الإلكتروني الخاص بك</value>
+  </data>
+  <data name="RegularExpressionValidator2Resource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RegularExpressionValidator2Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator1Resource1.ErrorMessage" xml:space="preserve">
+    <value>* Please fill out this field</value>
+  </data>
+  <data name="RequiredFieldValidator1Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator3Resource1.ErrorMessage" xml:space="preserve">
+    <value>* Please Enter the your email</value>
+  </data>
+  <data name="RequiredFieldValidator3Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator4Resource1.ErrorMessage" xml:space="preserve">
+    <value>الرجاء إدخال البريد الإلكتروني الصحيح</value>
+  </data>
+  <data name="RequiredFieldValidator4Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RequiredFieldValidator4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SearchbtnResource1.Text" xml:space="preserve">
+    <value>Search Doctor</value>
+  </data>
+  <data name="SearchbtnResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Speciality0Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SpecialityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="submit123Resource1.Text" xml:space="preserve">
+    <value>Send Link</value>
+  </data>
+  <data name="submit123Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox1Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBox1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSearchResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtSearchResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

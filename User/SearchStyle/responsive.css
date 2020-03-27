@@ -1,0 +1,429 @@
+/* Responsive styles
+================================================== */
+
+/* Large Devices, Wide Screens */
+@media (min-width : 1200px) {
+	
+}
+
+
+/* Medium Devices, Desktops */
+@media (max-width: 1024px) {
+
+.play_btn_text h4 {
+	font-size: 11px;
+}
+
+.play_btn_text h5 {
+    font-size: 14px;
+    color: #fff;
+    margin: 0 0;
+}
+
+.menu_title h3 { 
+	font-size: 22px;
+}
+
+.Performance img { 
+	height: 70px;
+}
+
+.join_title h3 { 
+	font-size: 22px;
+	letter-spacing: 0px;
+}
+
+
+
+}
+
+/* Small Devices, Tablets */
+@media (min-width : 768px) and (max-width: 991px) {
+	.top-nav ul li a {
+		padding: 10px 7px;
+	}
+	
+.inner-handing h2 { 
+	font-size: 34px; 
+}
+
+.inner-handing p { 
+	padding: 25px 0px 25px 0px;
+}
+
+.col_spas {
+	padding: 10px 10px;
+}
+
+.inner-button h1 { 
+	padding-top: 160px;
+	font-size: 46px;
+}
+
+.Performance {
+	padding: 25px 20px;
+}
+
+.skills_title h3 {
+	font-size: 22px; 
+}
+
+.List {
+	width: 164px; 
+}
+
+.join_title h3 {
+	font-size: 19px; 
+}
+
+.Join {
+	width: 200px; 
+}
+
+.hakkeem_app_text h2 {
+	padding: 90% 0;
+	color: #fff;
+	font-size: 30px;
+}
+
+.Download_title.hakkeem_app_text.text-left {
+	padding: 45px 0 0 0;
+}
+
+.menu_title h3 { 
+	padding: 20px 0 14px 0px; 
+	font-size: 23px;
+}
+	
+	
+}
+
+/* Small Devices Potrait */
+@media (max-width : 767px){
+	
+	.navbar-nav li a:hover {
+		background: #9a9a9a;
+		color: #fff;
+	}
+	
+.inner-handing h2 { 
+	font-size: 34px; 
+}
+
+.inner-handing p { 
+	padding: 25px 0px 25px 0px;
+}
+
+.col_spas {
+	padding: 10px 10px;
+}
+
+.inner-button h1 { 
+	padding-top: 60px;
+	font-size: 46px;
+}
+
+.Performance {
+	padding: 25px 20px;
+}
+
+.skills_title h3 {
+	font-size: 22px; 
+}
+
+.List {
+	width: 164px; 
+}
+
+.join_title h3 {
+	font-size: 19px; 
+}
+
+.Join {
+	width: 200px; 
+}
+
+.hakkeem_app_text h2 {
+	padding: 0 0;
+	color: #fff;
+	font-size: 30px;
+}
+
+.Download_title.hakkeem_app_text.text-left {
+	padding: 45px 0 0 0;
+}
+
+.menu_title h3 { 
+	padding: 20px 0 14px 0px; 
+	font-size: 23px;
+}
+
+.hakkeem_app_text.text-right {
+	text-align: center;
+	padding: 50px 0px;
+}
+
+.hakkeem_app_img img {
+	text-align: center;
+	margin: 0 30%;
+}
+
+.play_btn { 
+	padding: 10px 25px; 
+	margin: 10px 0;
+	width: 250px;
+}
+	
+	
+}
+
+/* Extra Small Devices, Phones */ 
+@media (max-width : 479px) {
+	
+	.navbar-nav li a:hover {
+		background: #9a9a9a;
+		color: #fff;
+	}
+	
+.inner-handing h2 { 
+	font-size: 30px; 
+}
+
+.inner-handing p { 
+	padding: 25px 0px 25px 0px;
+}
+
+.col_spas {
+	padding: 10px 10px;
+}
+
+.inner-button h1 {
+	padding-top: 40px;
+	font-size: 35px;
+}
+
+.title h2 { 
+	font-size: 33px;
+}
+
+.Performance {
+	padding: 25px 20px;
+}
+
+.skills_title h3 {
+	font-size: 22px; 
+}
+
+.List {
+	width: 164px; 
+}
+
+.join_title h3 {
+	font-size: 19px; 
+}
+
+.Join {
+	width: 200px; 
+}
+
+.hakkeem_app_text h2 {
+	padding: 0 0;
+	color: #fff;
+	font-size: 30px;
+}
+
+.Download_title.hakkeem_app_text.text-left {
+	padding: 45px 0 0 0;
+}
+
+.menu_title h3 { 
+	padding: 20px 0 14px 0px; 
+	font-size: 23px;
+}
+
+.hakkeem_app_text.text-right {
+	text-align: center;
+	padding: 50px 0px;
+}
+
+.hakkeem_app_img img {
+	text-align: center;
+	margin: 0 10%;
+}
+
+.play_btn { 
+	padding: 10px 25px; 
+	margin: 10px 0;
+	width: 250px;
+}
+
+.skills_btn {
+	text-align: center;
+	margin: 22px 0;
+}
+
+.join_title h3 { 
+	text-align: center;
+}
+
+.col-md-3.col-sm-4.text-right {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.canttri {
+	width: 60px; 
+}
+
+#demo {
+	width: 220px; 
+}
+
+.send {
+	width: 98px; 
+}
+
+.subscribe_box {
+	width: 287px; 
+}
+
+.Subscribe_btn {
+	width: 109px; 
+}
+
+.copy_right p {
+	color: #fff;
+	font-size: 13px;
+}
+	
+	
+}
+
+/* Custom, iPhone Retina */ 
+@media (min-width : 320px) and (max-width: 478px)  {
+	
+	.top-nav li a:hover {
+		background: #9a9a9a;
+		color: #fff;
+	}
+	
+.inner-handing h2 { 
+	font-size: 23px; 
+}
+
+.inner-handing p {
+	font-size: 14px;
+}
+
+.inner-handing p { 
+	padding: 25px 0px 25px 0px;
+}
+
+.col_spas {
+	padding: 10px 10px;
+}
+
+.inner-button h1 {
+	padding-top: 40px;
+	font-size: 27px;
+}
+
+.title h2 { 
+	font-size: 33px;
+}
+
+.Performance {
+	padding: 25px 20px;
+}
+
+.skills_title h3 {
+	font-size: 22px; 
+}
+
+.List {
+	width: 164px; 
+}
+
+.join_title h3 {
+	font-size: 19px; 
+}
+
+.Join {
+	width: 200px; 
+}
+
+.hakkeem_app_text h2 {
+	padding: 0 0;
+	color: #fff;
+	font-size: 30px;
+}
+
+.Download_title.hakkeem_app_text.text-left {
+	padding: 45px 0 0 0;
+}
+
+.menu_title h3 { 
+	padding: 20px 0 14px 0px; 
+	font-size: 23px;
+}
+
+.hakkeem_app_text.text-right {
+	text-align: center;
+	padding: 50px 0px;
+}
+
+.hakkeem_app_img img {
+	text-align: center;
+	margin: 0 -12px;
+}
+
+.play_btn { 
+	padding: 10px 25px; 
+	margin: 10px 0;
+	width: 250px;
+}
+
+.skills_btn {
+	text-align: center;
+	margin: 22px 0;
+}
+
+.join_title h3 { 
+	text-align: center;
+}
+
+.col-md-3.col-sm-4.text-right {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.canttri {
+	width: 60px; 
+}
+
+#demo {
+	width: 138px; 
+}
+
+.send {
+	width: 92px; 
+}
+
+.subscribe_box {
+	width: 172px;
+}
+
+.Subscribe_btn {
+	width: 98px; 
+}
+
+.copy_right p {
+	color: #fff;
+	font-size: 13px;
+}
+
+p {
+	font-size: 15px;
+}
+	
+}

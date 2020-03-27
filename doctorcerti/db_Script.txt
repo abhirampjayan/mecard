@@ -1,0 +1,17 @@
+----------------------------view_female-----------------------------------
+
+SELECT DISTINCT d_name AS d_name, d_sex, d_email, d_specialties, d_language, d_city, d_location, latitude, longitude, d_id, d_photo, d_address, d_status, DENSE_RANK() OVER (ORDER BY d_name) 
+t
+FROM         view_doc_available_time
+WHERE     d_sex = 'Female'
+
+
+------------------------------view_male---------------------
+
+SELECT DISTINCT d_name AS d_name, d_sex, d_email, d_specialties, d_language, d_city, d_location, latitude, longitude, d_id, d_photo, d_address, d_status, DENSE_RANK() OVER (ORDER BY d_name) 
+t
+FROM         view_doc_available_time
+WHERE     d_sex = 'Male'
+
+
+----------------------------------------------------------------------------------------------

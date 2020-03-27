@@ -1,0 +1,260 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminArabicMasterPage.master.cs" Inherits="BookDoc_Admin_AdminArabicMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="shortcut icon" type="text/css" href="images/titlelogo.png" />
+    <title>Hakkeem | Admin</title>
+ 
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+   
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="../css/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="../css/all.css">
+   <link rel="stylesheet" href="../css/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="../css/select2.min.css">
+  <link rel="stylesheet" href="../css/blue.css">
+    <link rel="stylesheet" href="../css/morris.css">
+   <link rel="stylesheet" href="../css/jquery-jvectormap-1.2.2.css">
+   <link rel="stylesheet" href="../css/datepicker3.css">
+   <link rel="stylesheet" href="../css/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="../css/bootstrap3-wysihtml5.min.css">
+  
+  <link rel="stylesheet" href="../css/daterangepicker-bs3.css">
+   <link rel="stylesheet" href="../css/select2.min.css">
+    <link href="../css/sweetalert.css" rel="stylesheet" />
+     <link rel="stylesheet" href="../css/bootstrap.min.css">
+<%-- <link href="../css/AdminLTE.min.css" rel="stylesheet" />--%>
+   <%-- <link rel="stylesheet" href="../css/_all-skins.min.css">--%>
+    
+    <link href="arabicdesign/dist/css/skins/_all-skins.min.css" rel="stylesheet" />
+    <link href="arabicdesign/dist/css/AdminLTE.min.css" rel="stylesheet" />
+  
+
+  
+    <script src="../js/jQuery-2.1.4.min.js"></script>
+   
+    <script src="../js/bootstrap.min.js"></script>
+   
+    <script src="../css/select2.full.min.js"></script>
+   
+    <script src="../js/jquery.inputmask.js"></script>
+    <script src="../js/jquery.inputmask.date.extensions.js"></script>
+    <script src="../js/jquery.inputmask.extensions.js"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="../js/daterangepicker.js"></script>
+  
+    <script src="../js/bootstrap-colorpicker.min.js"></script>
+  
+    <script src="..js/bootstrap-timepicker.min.js"></script>
+  
+    <script src="../js/jquery.slimscroll.min.js"></script>
+  
+    <script src="..js/icheck.min.js"></script>
+ 
+    <script src="../js/fastclick.min.js"></script>
+   
+    <script src="../js/app.min.js"></script>
+   
+    <script src="../js/demo.js"></script>
+
+   
+    <script src="../js/sweetalert.min.js"></script>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+   
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition skin-green sidebar-mini">
+   <form id="form1" runat="server">
+         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:Timer ID="Timer1" runat="server"  OnTick="Timer1_Tick" Interval="500"></asp:Timer>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <div class="wrapper">
+            <header class="main-header">
+               
+                <!-- Logo -->
+                <a href="Admin Index.aspx" class="logo">
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <span class="logo-mini">حكيم</span>
+                    <!-- logo for regular state and mobile devices -->
+                    <span class="logo-lg"><b>مشرف</b> - حكيم</span>
+                </a>
+                <!-- Header Navbar: style can be found in header.less -->
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" style="position:absolute;right:0">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <div class="navbar-custom-menu" dir="rtl" style="float:left;">
+                        <ul class="nav navbar-nav">
+                           <li>
+                               <%-- <a href="index.aspx" data-toggle="control-sidebar">الخروج</a>--%>
+                               <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/BookDoc Admin/index.aspx?l=ar-EG" >الخروج</asp:LinkButton>
+                            </li>
+                           
+                            <li>
+
+                                 <asp:LinkButton ID="LinkButton3"  runat="server"  CommandArgument="ar-EG" OnClick="LinkButton3_Click">English</asp:LinkButton>
+                                      
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                  
+                    <!-- search form -->
+                    <%--<div class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </div>--%>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu" dir="rtl">
+                        <li class="header">الملاحة الرئيسية</li>
+                         <li><a href="Admin Index.aspx?l=ar-EG"><i class="fa fa-home"></i><span>المشرف الصفحة الرئيسية</span></a></li>
+                          <li><a href="Settings.aspx?l=ar-EG"><i class="fa fa-gear"></i><span>إعدادات</span></a></li>
+                         <li><a href="users.aspx?l=ar-EG"><i class="fa fa-users"></i><span>المستعمل</span></a></li>
+                        <li><a href="Doctor.aspx?l=ar-EG"><i class="fa fa-medkit"></i><span>طبيب</span></a></li>
+                        <li><a href="hospital_doctor.aspx?l=ar-EG"><i class="fa fa-medkit"></i><span>طبيب المستشفى</span></a></li>
+                        <li><a href="Hospital.aspx?l=ar-EG"><i class="fa fa-hospital-o"></i><span>مستشفى</span></a></li>
+                         <li><a href="Create Doctor.aspx?l=ar-EG"><i class="fa fa-user-plus"></i><span>إنشاء الطبيب</span></a></li>
+                        <li><a href="Create hospital.aspx?l=ar-EG"><i class="fa fa-hospital-o"></i><span>إنشاء مستشفى</span></a></li>
+                       <li><a href="appointmenthistory.aspx?l=ar-EG"><i class="fa fa-list"></i><span>مواعيد التعيين</span></a></li>
+                          <li><a href="cancelhistory.aspx?l=ar-EG"><i class="fa fa-list"></i><span> تاريخ ملغى</span></a></li>
+                                
+                                 <li><a href="Doctor request.aspx?l=ar-EG">
+                                     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                         <ContentTemplate>
+                                             <i class="fa fa-registered"></i> <span>طلبات الطبيب</span><span class="label pull-left bg-yellow"><asp:Label ID="LblDoctorReqstNo" runat="server" Text="Label"></asp:Label></span>
+                                         </ContentTemplate>
+                                         <Triggers>
+                                             <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+                                         </Triggers>
+                                     </asp:UpdatePanel>
+                                     </a></li>
+                                 <li><a href="HospitalRequest.aspx?l=ar-EG">
+                                     <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                                         <ContentTemplate>
+                                              <i class="fa fa-registered"></i> <span>طلبات المستشفى</span><span class="label pull-left bg-yellow"><asp:Label ID="LblHosReqstNo" runat="server" Text="Label"></asp:Label></span>
+                                         </ContentTemplate>
+                                         <Triggers>
+                                                <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+                                         </Triggers>
+                                     </asp:UpdatePanel>
+                                   
+                                     </a></li>
+                      
+                     <li><a href="Del_users.aspx?l=ar-EG"><i class="fa fa-users"></i> تمت إزالة المستخدمين</a></li>
+                <li><a href="Del_Hospitals.aspx?l=ar-EG"><i class="fa fa-hospital-o"></i>المستشفيات إزالة</a></li>
+                <li><a href="Del_Doctors.aspx?l=ar-EG"><i class="fa fa-medkit"></i> الأطباء إزالة</a></li>
+                <li><a href="Del_Hdoctors.aspx?l=ar-EG"><i class="fa fa-circle-o"></i> إزالة الأطباء المستشفى</a></li>
+                        <li><a href="viewemail.aspx?l=ar-EG"><i class="fa fa-users"></i><span>مشتركين</span></a></li>
+                     
+                      <%--  <li class="header">LABELS</li>
+                        <li><a href="#"><i class="fa fa-circle-o text-red"></i><span>Important</span></a></li>
+                        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i><span>Warning</span></a></li>
+                        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i><span>Information</span></a></li>--%>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <div class="content-wrapper" dir="rtl" style="min-height:640px">
+                <section class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </section>
+            </div>
+             <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+       <%--   <b>Version</b> 2.3.0--%>
+        </div>
+        <strong>حقوق النشر &copy; 2018 <a href="http://www.Hakkeem.com">حكيم</a>.</strong> كل الحقوق محفوظة.
+      </footer>
+        </div>
+    </form>
+ 
+    <script src="../js/jQuery-2.1.4.min.js"></script>
+   
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  
+    <script>
+        $.widget.bridge('uibutton', $.ui.button);
+    </script>
+ 
+    <script src="../js/bootstrap.min.js"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="../js/morris.min.js"></script>
+ 
+    <script src="../js/jquery.sparkline.min.js"></script>
+  
+    <script src="../js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="../js/jquery-jvectormap-world-mill-en.js"></script>
+  
+    <script src="../js/jquery.knob.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="../js/daterangepicker.js"></script>
+ 
+    <script src="../js/bootstrap-datepicker.js"></script>
+  
+    <script src="../js/bootstrap3-wysihtml5.all.min.js"></script>
+  
+    <script src="../js/jquery.slimscroll.min.js"></script>
+  
+    <script src="../js/fastclick.min.js"></script>
+ 
+    <script src="../js/app.min.js"></script>
+ 
+    <script src="../js/dashboard.js"></script>
+  
+    <script src="../js/demo.js"></script>
+    <script src="../js/select2.full.min.js"></script>
+ 
+    <script src="../js/jquery.inputmask.js"></script>
+    <script src="../js/jquery.inputmask.date.extensions.js"></script>
+    <script src="../js/jquery.inputmask.extensions.js"></script>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="../js/daterangepicker.js"></script>
+   
+    <script src="../js/bootstrap-colorpicker.min.js"></script>
+  
+    <script src="../js/bootstrap-timepicker.min.js"></script>
+ 
+    <script src="../js/jquery.slimscroll.min.js"></script>
+  
+    <script src="../js/icheck.min.js"></script>
+ 
+    <script src="../js/fastclick.min.js"></script>
+ 
+     <script src="../js/app.min.js"></script>
+</body>
+</html>

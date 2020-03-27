@@ -1,0 +1,59 @@
+ USE [db_BookDoc]
+GO
+----------------------------tbl_cities------------------------
+
+/****** Object:  Table [dbo].[tbl_cities]    Script Date: 05/29/2017 16:46:45 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[tbl_cities](
+	[id] [bigint] IDENTITY(1,1) NOT NULL,
+	[City] [varchar](50) NULL,
+ CONSTRAINT [PK_tbl_Cities] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+------------------------------------------tbl_specialities---------------------------------------
+
+USE [db_BookDoc]
+GO
+
+/****** Object:  Table [dbo].[tbl_specialities]    Script Date: 05/29/2017 16:48:02 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[tbl_specialities](
+	[id] [bigint] IDENTITY(1,1) NOT NULL,
+	[Specialities] [varchar](50) NULL,
+ CONSTRAINT [PK_tbl_specialities] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+

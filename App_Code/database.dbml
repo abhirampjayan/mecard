@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="db_BookDoc" Class="databaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=db_BookDoc;User ID=sa;MultipleActiveResultSets=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="db_BookDocConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.doctor_availability" Member="doctor_availabilities">
+    <Type Name="doctor_availability">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_time" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_doctor_location" Member="tbl_doctor_locations">
+    <Type Name="tbl_doctor_location">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="d_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hos_doc_appmnt" Member="tbl_hos_doc_appmnts">
+    <Type Name="tbl_hos_doc_appmnt">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="h_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="u_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="a_reason" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_payment" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hos_doc_available" Member="tbl_hos_doc_availables">
+    <Type Name="tbl_hos_doc_available">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="h_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_a_time" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hos_location" Member="tbl_hos_locations">
+    <Type Name="tbl_hos_location">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="h_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_test_reports" Member="tbl_test_reports">
+    <Type Name="tbl_test_report">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="u_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="blood_test_report" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="urine_test_report" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="scan_test_report" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="xray_test_report" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="other_test_name" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="other_test_report" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_user_feed" Member="tbl_user_feeds">
+    <Type Name="tbl_user_feed">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="d_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="u_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="u_review" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="his_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_specialities" Member="tbl_specialities">
+    <Type Name="tbl_speciality">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Specialities" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_cities" Member="tbl_cities">
+    <Type Name="tbl_city">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_signup" Member="tbl_signups">
+    <Type Name="tbl_signup">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dob" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="contact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="photo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="age" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="date_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="otp" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="passwordreset" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="u_hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hos_doc_time" Member="tbl_hos_doc_times">
+    <Type Name="tbl_hos_doc_time">
+      <Column Name="date_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_dt_time" Member="view_dt_times">
+    <Type Name="view_dt_time">
+      <Column Name="d_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_test" Member="view_tests">
+    <Type Name="view_test">
+      <Column Name="d_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_specialties" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="h_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="hd_language" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="hd_location" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="h_regno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_doc_time" Member="tbl_doc_times">
+    <Type Name="tbl_doc_time">
+      <Column Name="date_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hdoctor" Member="tbl_hdoctors">
+    <Type Name="tbl_hdoctor">
+      <Column Name="hd_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="hd_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_country" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_contact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_address2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_education" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_college" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_experience" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_hospital_afili" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_profesional_mem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_award_publication" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_pro_statement" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="hd_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="hd_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="hd_dob" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_date_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_id_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_password_reset" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_about_you" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="hd_user_rating" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="h_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_age" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="hd_id_expire" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hospitalreg" Member="tbl_hospitalregs">
+    <Type Name="tbl_hospitalreg">
+      <Column Name="h_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="h_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_zipcode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="h_regno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="h_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_contact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="h_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="h_password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_password_reset" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="h_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="h_about" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="h_date_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="h_agreement" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_otp" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="h_hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_doctor" Member="tbl_doctors">
+    <Type Name="tbl_doctor">
+      <Column Name="d_id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="d_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_country" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_contact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_address2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_education" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_college" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_experience" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_hospital_afili" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_profesional_mem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_award_publication" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_pro_statement" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="d_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="d_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="d_dob" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_date_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_id_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_password_reset" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_about_you" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_user_rating" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="d_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_id_expire" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_age" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="d_otp" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="d_agreement" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_hos_doc_available_time" Member="view_hos_doc_available_times">
+    <Type Name="view_hos_doc_available_time">
+      <Column Name="h_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="hd_about_you" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="hd_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="hd_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="h_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="h_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="h_regno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="h_hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_test_hos_doc" Member="view_test_hos_docs">
+    <Type Name="view_test_hos_doc">
+      <Column Name="hd_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="hd_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="hd_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="h_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="h_regno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="h_hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_doctor_appointment" Member="tbl_doctor_appointments">
+    <Type Name="tbl_doctor_appointment">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="c_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="a_reason" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_payment" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="app_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="app_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_doctor_certificate" Member="tbl_doctor_certificates">
+    <Type Name="tbl_doctor_certificate">
+      <Column Name="certi" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_share_records" Member="tbl_share_records">
+    <Type Name="tbl_share_record">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="appointment_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="record_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="share_h_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="share_d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="records" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="share_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_rating" Member="tbl_ratings">
+    <Type Name="tbl_rating">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rate_wt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rate_bm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rate_service" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="u_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hos_appmnt_history" Member="tbl_hos_appmnt_histories">
+    <Type Name="tbl_hos_appmnt_history">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="h_id" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="u_id" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="a_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="a_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_end_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_reason" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_doc_daignose" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_doc_prescriptions" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="a_payment" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cons_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="share_d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="share_h_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_share_history" Member="tbl_share_histories">
+    <Type Name="tbl_share_history">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="appointment_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="history_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="share_h_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="share_d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="share_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_shared_history" Member="view_shared_histories">
+    <Type Name="view_shared_history">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="u_id" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="a_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="a_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_end_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_reason" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_doc_daignose" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="a_doc_prescriptions" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="a_payment" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="share_h_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="share_d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_rateFinal" Member="tbl_rateFinals">
+    <Type Name="tbl_rateFinal">
+      <Column Name="hakkim_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_doc_available_time" Member="view_doc_available_times">
+    <Type Name="view_doc_available_time">
+      <Column Name="d_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="a_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="d_about_you" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="d_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="d_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="d_hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_gg" Member="view_ggs">
+    <Type Name="view_gg">
+      <Column Name="d_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="d_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="d_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="d_hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_test_doc" Member="view_test_docs">
+    <Type Name="view_test_doc">
+      <Column Name="d_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="d_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="d_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="d_hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_female" Member="view_females">
+    <Type Name="view_female">
+      <Column Name="d_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="d_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="d_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_male" Member="view_males">
+    <Type Name="view_male">
+      <Column Name="d_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="d_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="d_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_fee" Member="tbl_fees">
+    <Type Name="tbl_fee">
+      <Column Name="d_hakkimid" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="rate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ratingview" Member="tbl_ratingviews">
+    <Type Name="tbl_ratingview">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rate_wt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rate_bm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rate_service" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="u_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_gg_female" Member="view_gg_females">
+    <Type Name="view_gg_female">
+      <Column Name="d_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="d_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="d_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="d_hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_gg_male" Member="view_gg_males">
+    <Type Name="view_gg_male">
+      <Column Name="d_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Decimal" DbType="Decimal(18,7)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="d_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="d_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="d_hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="t" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_doctorsearch" Member="view_doctorsearches">
+    <Type Name="view_doctorsearch">
+      <Column Name="d_hakkimid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="d_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="d_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="d_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_Language" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_admin" Member="tbl_admins">
+    <Type Name="tbl_admin">
+      <Column Name="username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_newsletter" Member="tbl_newsletters">
+    <Type Name="tbl_newsletter">
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dt" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_cancel" Member="tbl_cancels">
+    <Type Name="tbl_cancel">
+      <Column Name="app_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="hakkem_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dt" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hoscancel" Member="tbl_hoscancels">
+    <Type Name="tbl_hoscancel">
+      <Column Name="app_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="hakkem_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dt" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_blk_hos_doctor" Member="tbl_blk_hos_doctors">
+    <Type Name="tbl_blk_hos_doctor">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="hos_hakkeem_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="doctor_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_blk_hakkeem_doctor" Member="tbl_blk_hakkeem_doctors">
+    <Type Name="tbl_blk_hakkeem_doctor">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="hakkeem_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_report_form" Member="tbl_report_forms">
+    <Type Name="tbl_report_form">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="reason" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="apmnt_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="u_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="h_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="apmnt_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="apmnt_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hos_or_not" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_hakkimID" Member="tbl_hakkimIDs">
+    <Type Name="tbl_hakkimID">
+      <Column Name="hakkim_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="user_type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_doc_language" Member="tbl_doc_languages">
+    <Type Name="tbl_doc_language">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="d_Language" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="doc_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_blk_hospital" Member="tbl_blk_hospitals">
+    <Type Name="tbl_blk_hospital">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="hospital_hakkeem_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_blk_users" Member="tbl_blk_users">
+    <Type Name="tbl_blk_user">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_hakkeemid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_apmnt_cancel" Member="tbl_apmnt_cancels">
+    <Type Name="tbl_apmnt_cancel">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="apmnt_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="u_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cancel_rsn" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="canceled_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hos_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_shared_reports" Member="view_shared_reports">
+    <Type Name="view_shared_report">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="u_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="share_d_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="share_h_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="records" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="record_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_temp_hdoctor" Member="tbl_temp_hdoctors">
+    <Type Name="tbl_temp_hdoctor">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="hd_id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="hd_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_country" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_language" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_contact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_address2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_education" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_college" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_experience" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_hospital_afili" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_profesional_mem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_award_publication" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_specialties" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_pro_statement" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="hd_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="hd_photo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="hd_dob" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_date_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_id_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hd_password_reset" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_about_you" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="hd_user_rating" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="h_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_age" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="hd_id_expire" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="hd_city" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="h_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="reason" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="delete_date_and_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

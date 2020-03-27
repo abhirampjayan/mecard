@@ -1,0 +1,8 @@
+{
+    "message-count": "1",
+    "messages": [{
+        "to": "8086194845",
+        "status": "6",
+        "error-text": "Unroutable message - rejected"
+    }]
+}
